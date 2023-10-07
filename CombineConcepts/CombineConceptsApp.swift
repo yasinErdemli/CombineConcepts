@@ -11,7 +11,7 @@ import SwiftUI
 struct CombineConceptsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SequenceIntro()
         }
     }
 }

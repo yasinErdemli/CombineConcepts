@@ -11,6 +11,9 @@
 		7D87078E2AD1B1D4008AB223 /* FutureRunOnlyOnceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D87078D2AD1B1D4008AB223 /* FutureRunOnlyOnceView.swift */; };
 		7D8707902AD1BF81008AB223 /* FutureRunMultipleTimesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D87078F2AD1BF81008AB223 /* FutureRunMultipleTimesView.swift */; };
 		7D8707932AD1C841008AB223 /* JustIntroductionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8707922AD1C841008AB223 /* JustIntroductionView.swift */; };
+		7D8707962AD1D022008AB223 /* PassthroughSubjectIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8707952AD1D022008AB223 /* PassthroughSubjectIntro.swift */; };
+		7D8707992AD1D5C5008AB223 /* SequenceIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8707982AD1D5C5008AB223 /* SequenceIntro.swift */; };
+		7D87079B2AD1DA1E008AB223 /* SequenceWithString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D87079A2AD1DA1E008AB223 /* SequenceWithString.swift */; };
 		7DC2531F2AB62A6300D605B5 /* CombineConceptsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC2531E2AB62A6300D605B5 /* CombineConceptsApp.swift */; };
 		7DC253212AB62A6300D605B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC253202AB62A6300D605B5 /* ContentView.swift */; };
 		7DC253232AB62A6400D605B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DC253222AB62A6400D605B5 /* Assets.xcassets */; };
@@ -37,6 +40,9 @@
 		7D87078D2AD1B1D4008AB223 /* FutureRunOnlyOnceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureRunOnlyOnceView.swift; sourceTree = "<group>"; };
 		7D87078F2AD1BF81008AB223 /* FutureRunMultipleTimesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureRunMultipleTimesView.swift; sourceTree = "<group>"; };
 		7D8707922AD1C841008AB223 /* JustIntroductionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustIntroductionView.swift; sourceTree = "<group>"; };
+		7D8707952AD1D022008AB223 /* PassthroughSubjectIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassthroughSubjectIntro.swift; sourceTree = "<group>"; };
+		7D8707982AD1D5C5008AB223 /* SequenceIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceIntro.swift; sourceTree = "<group>"; };
+		7D87079A2AD1DA1E008AB223 /* SequenceWithString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceWithString.swift; sourceTree = "<group>"; };
 		7DC2531B2AB62A6300D605B5 /* CombineConcepts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CombineConcepts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DC2531E2AB62A6300D605B5 /* CombineConceptsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineConceptsApp.swift; sourceTree = "<group>"; };
 		7DC253202AB62A6300D605B5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -78,6 +84,23 @@
 			path = Just;
 			sourceTree = "<group>";
 		};
+		7D8707942AD1D001008AB223 /* PassthroughSubject */ = {
+			isa = PBXGroup;
+			children = (
+				7D8707952AD1D022008AB223 /* PassthroughSubjectIntro.swift */,
+			);
+			path = PassthroughSubject;
+			sourceTree = "<group>";
+		};
+		7D8707972AD1D5B3008AB223 /* Squence */ = {
+			isa = PBXGroup;
+			children = (
+				7D8707982AD1D5C5008AB223 /* SequenceIntro.swift */,
+				7D87079A2AD1DA1E008AB223 /* SequenceWithString.swift */,
+			);
+			path = Squence;
+			sourceTree = "<group>";
+		};
 		7DC253122AB62A6300D605B5 = {
 			isa = PBXGroup;
 			children = (
@@ -105,8 +128,10 @@
 				7DC253302AB6310000D605B5 /* HelperView */,
 				7DC2534E2AB688B600D605B5 /* Fail */,
 				7DE9C4432AB697FA006E743B /* Future */,
-				7DC2534C2AB6882500D605B5 /* Error.swift */,
 				7D8707912AD1C835008AB223 /* Just */,
+				7D8707942AD1D001008AB223 /* PassthroughSubject */,
+				7D8707972AD1D5B3008AB223 /* Squence */,
+				7DC2534C2AB6882500D605B5 /* Error.swift */,
 				7DC253222AB62A6400D605B5 /* Assets.xcassets */,
 				7DC253242AB62A6400D605B5 /* Preview Content */,
 			);
@@ -257,6 +282,8 @@
 				7D87078C2AD1AF07008AB223 /* FutureImmediateExecution.swift in Sources */,
 				7DC253502AB688CD00D605B5 /* FailIntro.swift in Sources */,
 				7DC253212AB62A6300D605B5 /* ContentView.swift in Sources */,
+				7D87079B2AD1DA1E008AB223 /* SequenceWithString.swift in Sources */,
+				7D8707992AD1D5C5008AB223 /* SequenceIntro.swift in Sources */,
 				7D87078E2AD1B1D4008AB223 /* FutureRunOnlyOnceView.swift in Sources */,
 				7DC253392AB6494600D605B5 /* PublishedViewModel.swift in Sources */,
 				7DC253412AB662BC00D605B5 /* PipelineUsingSink.swift in Sources */,
@@ -270,6 +297,7 @@
 				7DC2533D2AB64B1A00D605B5 /* PublishedValidation.swift in Sources */,
 				7DC2534B2AB6795500D605B5 /* EmptyIntro.swift in Sources */,
 				7DC2534D2AB6882500D605B5 /* Error.swift in Sources */,
+				7D8707962AD1D022008AB223 /* PassthroughSubjectIntro.swift in Sources */,
 				7DC253432AB6653400D605B5 /* LongRunningProcess.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
