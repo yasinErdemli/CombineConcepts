@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+enum PublisherError: Error, LocalizedError {
+    case bombHasBeenFound
+    
+    var errorDescription: String? {
+        switch self {
+        case .bombHasBeenFound:
+            return NSLocalizedString("You found a bomb", comment: "Bomb Error")
+        }
+    }
+}

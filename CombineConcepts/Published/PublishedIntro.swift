@@ -7,9 +7,19 @@
 
 import SwiftUI
 
+
+
 struct PublishedIntro: View {
+    @StateObject private var viewModel: PublishedViewModel = .init()
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(spacing: 15) {
+            HeaderView("@Published",subtitle: "Introduction",desc: "The @Published property wrapper with the ObservableObject is the publisher. It sends out a message to the view whenever its value has changed. The StateObject property wrapper helps to make the view the subscriber.")
+            
+            Text(viewModel.state)
+            
+            DescView("After one second the view updates")
+        }
+        .font(.title)
     }
 }
 

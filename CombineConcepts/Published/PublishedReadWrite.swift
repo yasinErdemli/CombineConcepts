@@ -8,8 +8,20 @@
 import SwiftUI
 
 struct PublishedReadWrite: View {
+    @StateObject private var viewModel: PublishedViewModel = .init()
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(spacing: 15) {
+            HeaderView("@Published", subtitle: "Read&Write", desc: "use dollar sign to create binding")
+            
+            TextField("state", text: $viewModel.state)
+                .textFieldStyle(.roundedBorder)
+                .padding()
+            
+            Text(viewModel.state)
+            
+            DescView("view will automatically redraw after changes")
+        }
+        .font(.title)
     }
 }
 

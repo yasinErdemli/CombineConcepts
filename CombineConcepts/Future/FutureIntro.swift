@@ -6,10 +6,46 @@
 //
 
 import SwiftUI
+import Combine
+import StoreKit
+
+class FutureIntroViewModel: ObservableObject {
+    @Published var hello: String = ""
+    @Published var goodbye: String = ""
+    private var cancellable: AnyCancellable?
+    
+    func sayHello() {
+        Future<String,Never> { promise in
+            promise(.success("Hello!"))
+        }
+        .assign(to: &$hello)
+    }
+    
+    func sayGoodbye() {
+        let featurePublisher = Future<String,Never> { promise in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                promise(.success("Goodbye!"))
+            }
+        }
+        
+        cancellable = featurePublisher
+            .sink { [unowned self] goodbye in
+                self.goodbye = goodbye
+            }
+    }
+}
 
 struct FutureIntro: View {
+    @StateObject private var viewModel = FutureIntroViewModel()
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(spacing: 15) {
+            HeaderView("Future", subtitle: "Intro", desc: "Future publisher can only publish once")
+            Button("Say Hello", action: viewModel.sayHello)
+            Text(viewModel.hello)
+                .padding(.bottom)
+            Button("Say Goodbye", action: viewModel.sayGoodbye)
+            Text(viewModel.goodbye)
+        }
     }
 }
 

@@ -8,8 +8,21 @@
 import SwiftUI
 
 struct PublishedValidation: View {
+    @StateObject private var viewModel: PublishedViewModel = .init()
+    @State private var message: String = ""
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(spacing: 15) {
+            HeaderView("Published", subtitle: "OnChange", desc: "You can validate data entry with onChange, but better make this in your view model")
+            HStack {
+                TextField("state", text: $viewModel.state)
+                    .textFieldStyle(.roundedBorder)
+                    .onChange(of: viewModel.state) { oldValue, newValue in
+                        message = newValue.isEmpty ? "❌" : "✅"
+                    }
+                Text(message)
+            }
+            .padding()
+        }
     }
 }
 
